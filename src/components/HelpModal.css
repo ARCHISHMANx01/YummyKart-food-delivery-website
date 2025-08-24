@@ -1,0 +1,86 @@
+.help-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+.help-modal {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+}
+
+.help-modal h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #ff6b6b;
+}
+
+.help-modal p {
+  font-size: 16px;
+  color: #444;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.help-return-btn {
+  margin-top: 20px;
+  padding: 10px 22px;
+  background-color: #ff6b6b;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 220px;
+}
+
+.help-return-btn:hover {
+  background-color: #e05656;
+}
+
+.help-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 24px;
+  border: none;
+  background: transparent;
+  color: #555;
+  cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .help-modal {
+    padding: 20px;
+  }
+
+  .help-modal h2 {
+    font-size: 20px;
+  }
+
+  .help-modal p {
+    font-size: 14px;
+  }
+
+  .help-return-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,576 @@
+
+/* ========== CART SLIDE-IN PANEL ========== */
+/* === CART DRAWER STYLES === */
+.cart-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.show-cart {
+  display: block;
+}
+
+.cart-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  max-width: 100%;
+  height: 95%;
+  background-color: #fffffff5;
+  padding: 20px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  animation: slideInCart 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+@keyframes slideInCart {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.cart-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  gap: 12px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 12px;
+}
+
+.cart-item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.cart-item-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.qty-controls button {
+  background-color: #eee;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.qty-controls button:hover {
+  background-color: #ccc;
+}
+
+.cart-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #ddd;
+}
+
+.checkout-btn {
+  width: 100%;
+  background-color: #00c853;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #00b74a;
+}
+
+@media (max-width: 480px) {
+  .cart-panel {
+    width: 50%;
+    height: 50%;
+    border-radius: 0;
+    top: auto;
+    bottom: 0;
+  }
+
+  .cart-item-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cart-item-info h4 {
+    font-size: 14px;
+  }
+
+  .cart-item-info p {
+    font-size: 12px;
+  }
+}
+
+
+
+/* index.css — ItemCard Styles */
+
+.item-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 300px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--secondary-color);
+}
+
+.item-card:hover {
+  transform: translateY(-4px);
+}
+
+.item-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+
+.item-details h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.item-details p {
+  font-size: 16px;
+  margin: 4px 0 12px;
+  color: #444;
+}
+
+.add-btn {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: #16a34a;
+  transform: scale(1.03);
+}
+
+@media (max-width: 350px) {
+  .food-items-container {
+    grid-template-columns: 1fr;
+    padding: 0 12px;
+  }
+}
+
+
+
+/* index.css — Home Page Styles */
+
+.home-page {
+  padding: 20px;
+}
+
+.banner {
+  background: linear-gradient(135deg, #facc15, #fbbf24);
+  color: #1f2937;
+  padding: 40px 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  color: #374151;
+}
+
+/* index.css — CategoryMenu Styles */
+
+.category-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.category-btn {
+  padding: 8px 16px;
+  background-color: #e5e7eb;
+  color: #111827;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.category-btn:hover {
+  background-color: #d1d5db;
+}
+
+.category-btn.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* index.css — FoodItems Grid */
+
+.food-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 10px 0;
+}
+.food-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+/* index.css — FoodCard Styles */
+
+.food-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.food-card:hover {
+  transform: scale(1.02);
+}
+
+.food-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.food-details {
+  padding: 12px;
+}
+
+.food-details h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.food-details p {
+  color: #4b5563;
+  font-weight: bold;
+}
+
+/* index.css — ProtectedRoute Styles */
+
+.protected-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 40px 20px;
+  background-color: #fef2f2;
+}
+
+.protected-message {
+  background-color: #fff;
+  border: 1px solid #fecaca;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.protected-message h2 {
+  color: #b91c1c;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.protected-message p {
+  color: #7f1d1d;
+  font-size: 1rem;
+}
+
+/* index.css — Error & Success Page Styles */
+
+.error-page,
+.success-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.error-page h1 {
+  font-size: 4rem;
+  color: #ef4444;
+  margin-bottom: 10px;
+}
+
+.success-page h2 {
+  font-size: 2rem;
+  color: #10b981;
+  margin-bottom: 10px;
+}
+
+.error-page p,
+.success-page p {
+  font-size: 1.1rem;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+.back-home-btn {
+  background-color: #3b82f6;
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background-color: #2563eb;
+}
+
+/* index.css — App Layout */
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f4f6;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+/*button styles */
+.add-btn {
+  background-color: #22c55e;
+  color: white;
+  padding: 8px 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #16a34a;
+}
+/*animations */
+.tilt-card {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.tilt-card:hover {
+  transform: scale(1.03) rotateX(5deg) rotateY(-5deg);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bounce {
+  animation: bounceIn 0.3s ease;
+}
+
+.success-container {
+  text-align: center;
+  padding: 80px 16px;
+}
+
+.go-home-btn {
+  margin-top: 24px;
+  display: inline-block;
+  background-color: #22c55e;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.go-home-btn:hover {
+  background-color: #16a34a;
+}
+
+/* index.css — Add Button Styles */
+.add-btn {
+  position: relative;
+  overflow: hidden;
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  transform: skewX(-20deg);
+  animation: shineSwipe 2s ease-out 5s infinite;
+}
+
+@keyframes shineSwipe {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.shine-again::before {
+  animation: shineSwipe 2s ease-in-out;
+}
+
+.home {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+}
+
+.hero-text .highlight {
+  color: #ff6600;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #555;
+}
+/*typing effect */
+.hero-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--text-color);
+  width: 0;
+  animation: typing 3s steps(30, end) forwards;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+
+
+
